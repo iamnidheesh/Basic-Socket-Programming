@@ -9,6 +9,9 @@
 int main() {
 	// 1.create a socket
 	int network_socket;
+	//TCP socket 
+	//AF_INET - ip4 comm.
+	//SOCK_STREAM - TCP
 	network_socket = socket(AF_INET, SOCK_STREAM , 0);
 	
 	//2. connect

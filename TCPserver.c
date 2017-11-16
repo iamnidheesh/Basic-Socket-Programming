@@ -20,7 +20,7 @@ int main() {
 	server_address.sin_port = htons(9002);
 	server_address.sin_addr.s_addr = INADDR_ANY; // any ip on local machine
 
-	// 2.bind the socket to out specified ip
+	// 2.bind the socket to out specified ip and port
 	bind(server_socket , (struct sockaddr *)&server_address,sizeof(server_address));
 	// 3. listen
 	listen(server_socket , 5);
