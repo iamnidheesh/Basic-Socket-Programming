@@ -1,6 +1,9 @@
 *what are sockets*
 low level end points for processing information accross a network connection.
 
+sockets sit underneath all of the common internet protocols.
+
+**TCP** - connection based
 *Client* socket workflow.
 	
 	socket() (descriptor) (type of socket) (protocol)
@@ -19,3 +22,44 @@ low level end points for processing information accross a network connection.
 		||
 	accept() return another socket to perform read and write operation.
 
+**UDP** - connectionless
+
+*Client* socket workflow.
+	socket()
+		||
+	gethostbyname()
+		||
+	{send()
+		||
+	recv()}
+		||
+	close()
+
+*Server* socket workflow
+	socket()
+		||
+	bind()
+		||
+	{recv()
+		||
+	send()}
+		||
+	close()
+
+**DataStructures**
+struct sockaddr {
+	unsigned short sa_family;
+	char sa_data[14];
+}
+
+// for internet comm.
+struct sockaddr_in {
+	short sin_family;
+	insigned short sin_port;// port no.
+	struct in_addr sin_addr; // IP address
+	char sin_zero[8];
+}
+
+struct in_addr {
+	unsigned long s_addr; // 4 bytes
+}
