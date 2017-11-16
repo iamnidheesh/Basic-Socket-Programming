@@ -1,0 +1,10 @@
+*what are sockets*
+low level end points for processing information accross a network connection.
+
+*Client* socket workflow.
+	
+	socket() (descriptor) (type of socket) (protocol)
+		||
+	connect() (specify ip and port)
+		||
+	recv()    (receive data)
