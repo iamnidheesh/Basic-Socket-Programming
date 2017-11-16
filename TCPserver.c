@@ -15,10 +15,10 @@ int main() {
 	server_socket = socket(AF_INET,SOCK_STREAM,0);
 
 	// define the server address.
-	struct socket_in server_address;
+	struct sockaddr_in server_address;
 	server_address.sin_family = AF_INET;
 	server_address.sin_port = htons(9002);
-	server_address.sin_addr.s_addr = INADDR_ANY // any ip on local machine
+	server_address.sin_addr.s_addr = INADDR_ANY; // any ip on local machine
 
 	// 2.bind the socket to out specified ip
 	bind(server_socket , (struct sockaddr *)&server_address,sizeof(server_address));

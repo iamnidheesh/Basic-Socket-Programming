@@ -24,7 +24,7 @@ int main() {
 	}
 	//3.receive data from server
 	char server_response[256];
-	recv(network_socket,&server_response,sizeof(server_response,0));
+	recv(network_socket,&server_response,sizeof(server_response),0);
 
 	//print out the server's response
 	printf("response : %s\n",server_response);

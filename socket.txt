@@ -8,3 +8,14 @@ low level end points for processing information accross a network connection.
 	connect() (specify ip and port)
 		||
 	recv()    (receive data)
+
+*Server* socket workflow.
+
+	socket()
+		||
+	bind() (ip and port for the socket) specify where to listen
+		||
+	listen() listen for connection
+		||
+	accept() return another socket to perform read and write operation.
+
