@@ -29,9 +29,9 @@ sockets sit underneath all of the common internet protocols.
 		||
 	gethostbyname()
 		||
-	{send()
+	{sendto()
 		||
-	recv()}
+	recvfrom()}
 		||
 	close()
 
@@ -40,9 +40,9 @@ sockets sit underneath all of the common internet protocols.
 		||
 	bind()
 		||
-	{recv()
+	{recvfrom()
 		||
-	send()}
+	sendto()}
 		||
 	close()
 
